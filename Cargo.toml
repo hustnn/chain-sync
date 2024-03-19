@@ -1,0 +1,30 @@
+[package]
+name = "chain-sync"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+flume = "0.10.14"
+dashmap = "5.3.4"
+ethers = "0.17.0"
+serde = { version = "1.0.137", features = ["derive"] }
+serde_json = "1.0.81"
+thiserror = "1.0.31"
+async-trait = "0.1.56"
+log = "0"
+eyre = "0.6.8"
+uuid = { version = "1", features = ["serde", "v4"] }
+chrono = { version = "0.4.19", features = ["serde"] }
+tokio = { version = "1.20.1", features = ["full"] }
+crossbeam-channel = "0.5.6"
+bytes = "1"
+
+# High-level writer
+parquet-format = "4.0.0"
+
+arrow = "20"
+parquet = "20"
+
+deltalake = { git = "https://github.com/hustnn/delta-rs.git", branch="dev01", features=["s3-rustls"]}
